@@ -14,7 +14,7 @@ import {Routes,Route} from 'react-router-dom'
 const Router = () =>{
 
     return (
-        <Route>
+        <Routes>
             <Route path = "/"  element={<Home/>}/>
             <Route path = "/home"  element={<Home/>}/>
             <Route path = "/doctors"  element={<Doctor/>}/>
@@ -24,7 +24,7 @@ const Router = () =>{
             <Route path = "/contact"  element={<Contact/>}/>
             <Route path = "/service"  element={<Services/>}/>
          
-        </Route>
+        </Routes>
     )
 };
 
