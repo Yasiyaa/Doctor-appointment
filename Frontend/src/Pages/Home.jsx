@@ -7,12 +7,16 @@ import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
 import videoImage from "../assets/images/video-icon.png";
 import featureImage from "../assets/images/feature-img.png";
+import faqImage from "../assets/images/faq-img.png";
 import avatarIcon from "../assets/images/avatar-icon.png";
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import About from "../Components/About/About";
 import ServiceList from "../Components/Servieces/ServiceList";
 import DoctorList from "../Components/Doctors/DoctorList";
+import FaqList from "../Components/Faq/FaqList";
+import Testimonial from "../Components/Testimonial/Testimonial";
+
 
 const Home = () => {
   return (
@@ -273,9 +277,50 @@ const Home = () => {
             </p>
           </div>
 
-          <DoctorList/>
+          <DoctorList />
         </div>
       </section>
+
+      {/*=========Our great doctors end========*/}
+
+      {/*=========Faq section========*/}
+
+      <section>
+        <div className="container">
+          <div className="flex justify-between gap-[50px] lg:gap-0">
+            <div className="w-1/2 hidden md:block">
+              <img src={faqImage} alt="" />
+            </div>
+
+            <div className="w-full md:w-1/2">
+              <h2 className="heading">
+                Most questions by our beloved patients
+              </h2>
+              <FaqList/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/*=========Faq section end========*/}
+
+      {/*=========Testimonial section========*/}
+
+      <section>
+        <div className="container">
+        <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center">What our patient say</h2>
+            <p className="text__para text-center">
+              world class care for everyone. Our health system offers
+              unmatched,expert health care
+            </p>
+          </div>
+          <Testimonial/>
+        </div>
+      </section>
+
+      {/*=========Testimonial section end========*/}
+
     </>
   );
 };
